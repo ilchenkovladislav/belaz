@@ -3,15 +3,15 @@
     max-width: 500px;
     padding: 0 20px;
     width: 100%;
+    margin: 0 auto;
 
-    @media (min-width: ) {
-        margin: 0 auto;
+    @media (min-width: $tablet-screen) {
         width: 640px;
         padding: 0;
         max-width: none;
     }
     
-    @media (min-width: ) {
+    @media (min-width: $desktop-screen) {
         width: 960px;
     }
 }

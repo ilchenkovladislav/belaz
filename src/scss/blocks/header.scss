@@ -1,0 +1,226 @@
+.header {
+    background-color: $black;
+    color: $text-white;
+    padding: 30px 0;
+}
+
+.header__outer-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $tablet-screen) {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+    }
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    transform: translateX(20px);
+    width: 170px;
+
+    @media (min-width: $tablet-screen) {
+        margin: 0;
+        transform: none;
+    }
+}
+
+.header__logo-text {
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.header__toggle {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $tablet-screen) {
+        display: none;
+    }
+}
+
+.header__burger {
+    position: relative;
+    display: block;
+    font-size: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: #fff;
+    }
+
+    &::before {
+        top: 10px;
+    }
+
+    &::after {
+        top: -10px;
+    }
+}
+
+.header__inner-wrapper {
+    display: none;
+
+    &--opened {
+        position: absolute;
+        display: block;
+        background-color: $black;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        padding: 50px;
+    }
+
+    @media (min-width: $tablet-screen) {
+        display: grid;
+        grid-template: "phones call"
+                        "hours call";
+        grid-template-columns: 1fr min-content;
+        align-items: center;
+    }
+
+    @media (min-width: $desktop-screen) {
+        grid-template: "hours phones call";
+        grid-template-columns: 1fr min-content min-content;
+    }
+}
+
+.header__close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    @media (min-width: $tablet-screen) {
+        display: none;
+    }
+}
+
+.header__working-hours {
+    white-space: nowrap;
+    text-align: center;
+    margin-top: 50px;
+    line-height: 1.7;
+
+    @media (min-width: $tablet-screen) {
+        grid-area: hours;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    @media (min-width: $desktop-screen) {
+        margin-left: 150px;
+    }
+}
+
+.header__time br {
+    @media (min-width: $tablet-screen) {
+        display: none;
+    }
+
+    @media (min-width: $desktop-screen) {
+        display: block;
+    }
+}
+
+.header__phones {
+    text-align: center;
+    margin-top: 30px;
+    white-space: nowrap;
+
+    
+    @media (min-width: $tablet-screen) {
+        grid-area: phones;
+        margin-top: 0;
+    }
+
+    @media (min-width: $desktop-screen) {
+        margin-right: 25px;
+    }
+}
+
+.header__phone {
+    display: block;
+    color: $text-white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 22px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $tablet-screen) {
+        margin-bottom: 10px;
+        font-size: 14px;
+        display: inline-block;
+    }
+
+    @media (min-width: $desktop-screen) {
+        display: block;
+        font-size: 18px;
+    }
+}
+
+.header__slash {
+    display: none;
+
+    @media (min-width: $tablet-screen) {
+        display: inline;
+        color: #888;
+    }
+
+    @media (min-width: $desktop-screen) {
+        display: none;
+    }
+}
+
+.header__request-call {
+    width: 100%;
+    height: 50px;
+    background-color: $btn-blue;
+    margin-top: 50px;
+    
+    
+    @media (min-width: $tablet-screen) {
+        grid-area: call;
+        margin-top: 0;
+        width: 150px;
+    }
+}

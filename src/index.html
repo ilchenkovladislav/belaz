@@ -9,8 +9,30 @@
     <link rel="stylesheet" href="./css/style.min.css">
 </head>
 <body>
-    <header>
+    <header class="header">
+        <div class="container header__outer-wrapper">
+            <div class="header__logo">
+                <img src="img/logo.svg" alt="Eddie's car логотип">
+                <span class="header__logo-text">Eddie's-Car</span>
+            </div>
 
+            <button class="header__toggle" type="button"><span class="header__burger">Открыть меню</span></button>
+
+            <div class="header__inner-wrapper">
+                <button class="header__close" type="button"><span class="visually-hidden">Закрыть меню</span></button>
+                <div class="header__working-hours">
+                    <p class="header__time">c 9:00 до 21:00 <br> без выходных</p>
+                </div>
+    
+                <div class="header__phones">
+                    <a class="header__phone" href="tel:+78182474725">+7 818 247 47 25</a>
+                    <span class="header__slash">\</span>
+                    <a class="header__phone" href="tel:+78182474725">+7 818 247 28 91</a>
+                </div>
+    
+                <button class="button header__request-call" type="button">Заказать звонок</button>
+            </div>
+        </div>
     </header>
     <main>
 
@@ -18,5 +40,19 @@
     <footer>
 
     </footer>
+
+    <script>
+        const headerToggle = document.querySelector(".header__toggle");
+        const mobileWrapper = document.querySelector(".header__mobile-wrapper");
+        const headerClose = document.querySelector(".header__close");
+
+        headerToggle.addEventListener("click", () => {
+            mobileWrapper.classList.add("header__mobile-wrapper--opened");
+        });
+
+        headerClose.addEventListener("click", () => {
+            mobileWrapper.classList.remove("header__mobile-wrapper--opened");
+        });
+    </script>
 </body>
 </html>
