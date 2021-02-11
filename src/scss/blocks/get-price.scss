@@ -1,0 +1,162 @@
+.get-price {
+    padding: 50px 0;
+
+    @media (min-width: $tablet-screen) {
+        padding: 70px 0;
+    }
+
+    @media (min-width: $desktop-screen) {
+        background-image: url("../img/get-price-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center left;
+        padding: 100px 0;
+
+        @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+            background-image: url("../img/get-price-bg@2x.jpg");
+        }
+    }
+
+}
+
+.get-price__title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.5;
+
+    @media (min-width: $tablet-screen) {
+        font-size: 26px;
+    }
+
+    @media (min-width: $desktop-screen) {
+        text-align: right;
+    }
+}
+
+.get-price__title br {
+    display: none;
+
+    @media (min-width: $desktop-screen) {
+        display: block;
+    }
+}
+
+.get-price__form {
+    margin-top: 40px;
+
+    @media (min-width: $tablet-screen) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    @media (min-width: $desktop-screen) {
+        width: 700px;    
+        margin-left: auto;
+        margin-top: 60px;
+    }
+}
+
+.get-price__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:nth-child(2) {
+        margin-bottom: 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 20px;
+        right: 20px;
+    }
+
+    &--email {
+        &::after {
+            background-image: url("../img/envelope.svg");
+        }
+    }
+    
+    &--phone {
+        &::after {
+            background-image: url("../img/phone.svg");
+        }
+    }
+
+    @media (min-width: $tablet-screen) {
+        margin-bottom: 0;
+    }
+}
+
+.get-price__input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    padding-right: 70px;
+    font-size: 16px;
+    background-color: $grey;
+    border: none;
+
+    @media (min-width: $desktop-screen) {
+        padding: 30px;
+        padding-right: 70px;
+    }
+}
+
+.get-price__text {
+    margin-top: 30px;
+    font-size: 11px;
+    text-align: center;
+
+    @media (min-width: $tablet-screen) {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        align-self: center;
+        margin-top: 0;
+        padding-right: 50px;
+        text-align: right;
+        font-size: 14px;
+        font-weight: bold;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 30px;
+            right: 0;
+            background-image: url("../img/clock.svg");
+        }
+    }
+}
+
+.get-price__text br {
+    display: none;
+
+    @media (min-width: $tablet-screen) {
+        display: block;
+    }
+}
+
+.get-price__submit {
+    margin-top: 10px;
+    width: 100%;
+    padding: 20px 0;
+    background-color: $btn-blue;
+
+    @media (min-width: $tablet-screen) {
+        margin-top: 0;
+    }
+
+    @media (min-width: $desktop-screen) {
+        padding: 30px 0;
+    }
+}
