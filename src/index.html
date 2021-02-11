@@ -35,7 +35,20 @@
         </div>
     </header>
     <main>
-
+        <section class="main">
+            <div class="container main__container">
+                <div class="main__wrapper">
+                    <h1 class="main__title">Оригинальные запчасти <br> для белаз</h1>
+                    <p class="main__text">С бесплатной доставкой <br> в ваш город!</p>
+                    <ul class="main__advantages">
+                        <li class="main__advantage main__advantage--price">Дилерские цены - ниже на 20%, работаем без посредников!</li>
+                        <li class="main__advantage main__advantage--delivery">Срочная бесплатная доставка за 7 дней</li>
+                        <li class="main__advantage main__advantage--installment">Даем рассрочку 6 месяцев</li>
+                        <li class="main__advantage main__advantage--guarantee">Даем гарантию от 12 месяцев</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
@@ -43,15 +56,15 @@
 
     <script>
         const headerToggle = document.querySelector(".header__toggle");
-        const mobileWrapper = document.querySelector(".header__mobile-wrapper");
+        const mobileWrapper = document.querySelector(".header__inner-wrapper");
         const headerClose = document.querySelector(".header__close");
 
         headerToggle.addEventListener("click", () => {
-            mobileWrapper.classList.add("header__mobile-wrapper--opened");
+            mobileWrapper.classList.add("header__inner-wrapper--opened");
         });
 
         headerClose.addEventListener("click", () => {
-            mobileWrapper.classList.remove("header__mobile-wrapper--opened");
+            mobileWrapper.classList.remove("header__inner-wrapper--opened");
         });
     </script>
 </body>
