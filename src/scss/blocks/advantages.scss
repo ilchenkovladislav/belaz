@@ -17,6 +17,14 @@
     }
 }
 
+.advantages__title br {
+    display: none;
+
+    @media (min-width: $desktop-screen) {
+        display: block;
+    }
+}
+
 .advantages__text {
     text-align: center;
     margin-top: 20px;
@@ -36,7 +44,7 @@
     @media (min-width: $desktop-screen) {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         gap: unset;
     }
 }
@@ -50,7 +58,7 @@
 
     @media (min-width: $tablet-screen) {
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: min-content 1fr;
         margin-bottom: 0;
     }
 
