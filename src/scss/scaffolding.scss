@@ -55,3 +55,14 @@ img {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.secondary-title {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+
+    @media (min-width: $tablet-screen) {
+        font-size: 30px;
+    }
+}
