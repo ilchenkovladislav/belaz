@@ -70,7 +70,7 @@
         <section class="advantages">
             <div class="container">
                 <h2 class="secondary-title advantages__title">Вам не придется ждать!</h2>
-                <p class="advantages__text">Любые запчасти для всех моделей Белаз всегда в наличии!</p>
+                <p class="under-title-text advantages__text">Любые запчасти для всех моделей Белаз всегда в наличии!</p>
                 <ul class="advantages__list">
                     <li class="advantages__item">
                         <img src="img/engine.svg" alt="" class="advantages__img">
@@ -94,7 +94,7 @@
         <section class="detail">
             <div class="container">
                 <h2 class="secondary-title">Ищете конкретную деталь?</h2>
-                <p class="detail__text">Если у вас есть артикул - введите его в поле ниже и получите цену <br> ПРЯМО СЕЙЧАС!</p>
+                <p class="under-title-text detail__text">Если у вас есть артикул - введите его в поле ниже и получите цену <br> ПРЯМО СЕЙЧАС!</p>
                 <form action="#" method="post" class="detail__form">
                     <div class="detail__input-wrapper">
                         <label class="visually-hidden" for="detail__code">Артикул</label>
@@ -156,6 +156,75 @@
                 </ul>
             </div>
         </section>
+        <section class="faq">
+            <div class="container">
+                <h2 class="secondary-title">У вас остались вопросы?</h2>
+                <p class="under-title-text">На ваши вопросы отвечает Эдуард</p>
+
+                <div class="faq__inner-wrapper">
+                    <div class="faq__list-wrapper">
+                        <ol class="faq__list">
+                            <li class="faq__item">
+                                <button class="faq__question" type="button">Как заказать деталь правильно?</button>
+                                <div class="faq__answer">
+                                    <button class="faq__close">Закрыть ответ</button>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam, illum ipsa perferendis excepturi aut?
+                                </div>
+                            </li>
+                            <li class="faq__item">
+                                <button class="faq__question" type="button">Что делать, если запчасти не понадобились?</button>
+                                <div class="faq__answer">
+                                    <button class="faq__close">Закрыть ответ</button>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam, illum ipsa perferendis excepturi aut?
+                                </div>
+                            </li>
+                            <li class="faq__item">
+                                <button class="faq__question" type="button">Можете ли вы установить деталь?</button>
+                                <div class="faq__answer">
+                                    <button class="faq__close">Закрыть ответ</button>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam, illum ipsa perferendis excepturi aut?
+                                </div>
+                            </li>
+                            <li class="faq__item">
+                                <button class="faq__question" type="button">В чем приемущество оригинальных деталей?</button>
+                                <div class="faq__answer">
+                                    <button class="faq__close">Закрыть ответ</button>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, exercitationem.
+                                    <br>
+                                    <br>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero commodi quas, optio vel nobis recusandae possimus laudantium sint dolore vero?
+                                </div>
+                            </li>
+                            <li class="faq__item">
+                                <button class="faq__question" type="button">Можно ли сделать заказ из другой страны?</button>
+                                <div class="faq__answer">
+                                    <button class="faq__close">Закрыть ответ</button>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam, illum ipsa perferendis excepturi aut?
+                                </div>
+                            </li>
+                            <li class="faq__item faq__item--hidden">
+                                <button class="faq__question" type="button">Можно ли вопрос 1?</button>
+                                <div class="faq__answer">
+                                    <button class="faq__close">Закрыть ответ</button>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam, illum ipsa perferendis excepturi aut?
+                                </div>
+                            </li>
+                            <li class="faq__item faq__item--hidden">
+                                <button class="faq__question" type="button">Можно ли вопрос 2?</button>
+                                <div class="faq__answer">
+                                    <button class="faq__close">Закрыть ответ</button>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quibusdam, illum ipsa perferendis excepturi aut?
+                                </div>
+                            </li>
+                        </ol>
+                        <button class="faq__more" type="button">Еще вопросы</button>
+                    </div>
+                    <div class="faq__img-wrapper">
+                        <img class="faq__img" width="600" height="450" src="img/director.jpg" alt="Директор компании ООО Eddie's car" srcset="img/director@2x.jpg 2x">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
 
@@ -172,6 +241,49 @@
 
         headerClose.addEventListener("click", () => {
             mobileWrapper.classList.remove("header__inner-wrapper--opened");
+        });
+    </script>
+
+    <script>
+        const faqQuestions = document.querySelectorAll(".faq__question");
+        const faqClose = document.querySelectorAll(".faq__close");
+
+        let closeAllAnswers = (questions) => {
+            questions.forEach((question) => {
+                if (question.nextElementSibling.classList.contains("faq__answer--opened")) {
+                    question.nextElementSibling.classList.remove("faq__answer--opened");
+                }
+            });
+        }
+
+        faqQuestions.forEach((question) => {
+            question.addEventListener("click", () => {
+                if (question.nextElementSibling.classList.contains("faq__answer--opened")) {
+                    question.nextElementSibling.classList.remove("faq__answer--opened");
+                } else {
+                    closeAllAnswers(faqQuestions);
+                    question.nextElementSibling.classList.add("faq__answer--opened");
+                }
+            });
+        })
+
+        faqClose.forEach((close) => {
+            close.addEventListener("click", () => {
+                close.parentElement.classList.remove("faq__answer--opened");
+            });
+        });
+    </script>
+
+    <script>
+        const faqMore = document.querySelector(".faq__more");
+        const faqItemsHidden = document.querySelectorAll(".faq__item--hidden");
+
+        faqMore.addEventListener("click", () => {
+            faqMore.classList.add("faq__more--hidden");
+
+            faqItemsHidden.forEach((item) => {
+                item.classList.remove("faq__item--hidden");
+            })
         });
     </script>
 </body>

@@ -20,22 +20,6 @@
     }
 }
 
-.detail__text {
-    text-align: center;
-    line-height: 1.5;
-    margin-top: 10px;
-    font-size: 14px;
-
-    @media (min-width: $tablet-screen) {
-        margin-top: 20px;
-        font-size: 16px;
-    }
-
-    @media (min-width: $desktop-screen) {
-        font-size: 18px;
-    }
-}
-
 .detail__text br {
     display: none;
 
