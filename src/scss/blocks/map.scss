@@ -1,0 +1,10 @@
+.map__img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: none;
+}
+
+.map__img.no-js {
+    display: block;
+}
