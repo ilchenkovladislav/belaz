@@ -1,0 +1,104 @@
+.consultation {
+    padding: 30px 0;
+    background-color: $blue;
+    color: $text-white;
+
+    @media (min-width: $tablet-screen) {
+        padding: 70px 0;
+    }
+    
+    @media (min-width: $desktop-screen) {
+        padding: 100px 0;
+        background-image: url("../img/consultation-bg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right 230px;
+
+        @media (min-resolution: 144dpi), (min-resolution: 192dppx) {
+            background-image: url("../img/consultation-bg@2x.png");
+        }
+    }
+}
+
+.consultation__text {
+    text-align: center;
+    margin-top: 40px;
+
+    @media (min-width: $tablet-screen) {
+        margin-top: 60px;
+    }
+}
+
+.consultation__tel {
+    display: block;
+    color: $text-white;
+    font-size: 32px;
+    text-decoration-style: dotted;
+    text-decoration-color: rgba($text-white, .5);
+    text-underline-offset: 5px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.consultation__form {
+    margin-top: 50px;
+
+    @media (min-width: $tablet-screen) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    @media (min-width: $desktop-screen) {
+        width: 800px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+}
+
+.consultation__input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 20px;
+        right: 20px;
+    }
+    
+    &--phone {
+        &::after {
+            background-image: url("../img/phone.svg");
+        }
+    }
+}
+
+.consultation__input {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    padding-right: 70px;
+    font-size: 16px;
+    background-color: $grey;
+    border: none;
+
+    @media (min-width: $desktop-screen) {
+        padding: 30px;
+        padding-right: 70px;
+    }
+}
+
+.consultation__submit {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: $orange;
+
+    @media (min-width: $tablet-screen) {
+        margin-top: 0;
+    }
+}
