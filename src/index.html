@@ -73,7 +73,7 @@
             <div class="container">
                 <h2 class="secondary-title advantages__title">Вам не придется ждать!</h2>
                 <p class="under-title-text advantages__text">Любые запчасти для всех моделей Белаз всегда в наличии!</p>
-                <ul class="advantages__list">
+                <ul class="advantages__list owl-carousel">
                     <li class="advantages__item">
                         <img src="img/engine.svg" alt="" class="advantages__img">
                         <p class="advantages__description">Любые типы деталей от шайбы до двигателя!</p>
@@ -138,7 +138,7 @@
         <section class="advantages">
             <div class="container">
                 <h2 class="secondary-title advantages__title">У нас разработаны бонусные системы <br> и скидки для наших клиентов</h2>
-                <ul class="advantages__list">
+                <ul class="advantages__list owl-carousel">
                     <li class="advantages__item">
                         <img src="img/tenpercent.svg" alt="" class="advantages__img">
                         <p class="advantages__description">Дополнительная скидка 10% на вторую запчасть и любые последующие</p>
@@ -232,7 +232,7 @@
             <div class="container">
                 <h2 class="secondary-title">С нами удобно работать!</h2>
                 <p class="under-title-text">Более 70% клиентов приходят к нам по рекомендации!</p>
-                <ul class="advantages__list">
+                <ul class="advantages__list owl-carousel">
                     <li class="advantages__item">
                         <img src="img/payment.svg" alt="" class="advantages__img">
                         <p class="advantages__description">Вы вносите предоплату в размере 50% от стоимости запчасти</p>
@@ -267,7 +267,7 @@
         <section class="advantages advantages--light">
             <div class="container">
                 <h2 class="secondary-title">У нас в штате есть мобильные бригады, готовые выехать на сервисное обслуживание, ремонт и проведение диагностики!</h2>
-                <ul class="advantages__list">
+                <ul class="advantages__list owl-carousel">
                     <li class="advantages__item">
                         <img src="img/delivery-truck-2.svg" alt="" class="advantages__img">
                         <p class="advantages__description">Организуем выезд специалистов в течение двух дней</p>
@@ -387,7 +387,7 @@
 
     <script>
         $(document).ready(function(){
-            $(".owl-carousel").owlCarousel({
+            $(".storage__list").owlCarousel({
                 nav: true,
                 dots: false,
                 navContainerClass: "storage__nav",
@@ -411,6 +411,19 @@
                     }
                 }
             });
+        });
+
+        $(window).on("load", () => {
+            if ($(this).width() > 767) {
+                $(".advantages__list").trigger('destroy.owl.carousel');
+            } else {
+                $(".advantages__list").owlCarousel({
+                    items: 1,
+                    dotsClass: "advantages__dots",
+                    dotClass: "advantages__dot",
+                    autoHeight: true
+                });
+            }
         });
     </script>
 </body>

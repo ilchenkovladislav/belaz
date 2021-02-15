@@ -78,7 +78,7 @@
 
 .advantages__img {
     display: block;
-    width: 125px;
+    width: 125px !important;
     margin: 0 auto;
 
     @media (min-width: $tablet-screen) {
@@ -90,4 +90,25 @@
     text-align: center;
     margin-top: 30px;
     line-height: 1.5;
+}
+
+.advantages__dots {
+    margin: 0 auto;
+    margin-top: 50px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+.advantages__dot {
+    background-color: $grey;
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 50%;
+
+    &.active {
+        background-color: $orange;
+    }
 }
