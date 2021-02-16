@@ -9,13 +9,13 @@
     
     @media (min-width: $desktop-screen) {
         padding: 100px 0;
-        background-image: url("../img/consultation-bg.png");
+        background-image: url("../img/consultation-bg.jpg");
         background-repeat: no-repeat;
         background-size: contain;
-        background-position: right 230px;
+        background-position: right bottom;
 
         @media (min-resolution: 144dpi), (min-resolution: 192dppx) {
-            background-image: url("../img/consultation-bg@2x.png");
+            background-image: url("../img/consultation-bg@2x.jpg");
         }
     }
 }

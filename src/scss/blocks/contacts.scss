@@ -7,13 +7,13 @@
     
     @media (min-width: $desktop-screen) {
         padding: 100px 0;
-        background-image: url("../img/contacts-bg.png");
+        background-image: url("../img/contacts-bg.jpg");
         background-repeat: no-repeat;
-        background-size: 1500px;
-        background-position: center -30px;
+        background-size: cover;
+        background-position: center;
 
         @media (min-resolution: 144dpi), (min-resolution: 192dppx) {
-            background-image: url("../img/contacts-bg@2x.png");
+            background-image: url("../img/contacts-bg@2x.jpg");
         }
     }
 }
