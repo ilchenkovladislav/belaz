@@ -65,6 +65,11 @@ img {
     @media (min-width: $tablet-screen) {
         font-size: 30px;
     }
+
+    @media (min-width: $desktop-screen) {
+        width: 700px;
+        margin: 0 auto;
+    }
 }
 
 .under-title-text {

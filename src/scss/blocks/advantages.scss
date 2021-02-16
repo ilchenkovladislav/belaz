@@ -66,7 +66,8 @@
 
     @media (min-width: $tablet-screen) {
         display: grid;
-        grid-template-rows: min-content 1fr;
+        grid-template-rows: 125px 1fr;
+        align-items: center;
         margin-bottom: 0;
         width: 300px;
     }
@@ -78,12 +79,7 @@
 
 .advantages__img {
     display: block;
-    width: 125px !important;
     margin: 0 auto;
-
-    @media (min-width: $tablet-screen) {
-        width: 100px;
-    }
 }
 
 .advantages__description {
